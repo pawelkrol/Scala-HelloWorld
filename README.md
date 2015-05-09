@@ -8,7 +8,7 @@ This `Hello World` application is setup with [sbt 0.13.8](http://www.scala-sbt.o
 VERSION
 -------
 
-Version 0.01 (2015-05-08)
+Version 0.02 (2015-05-09)
 
 INSTALLATION
 ------------
@@ -18,7 +18,7 @@ In order to build and run an application JAR type the following:
     $ git clone git://github.com/pawelkrol/Scala-HelloWorld.git
     $ cd Scala-HelloWorld
     $ sbt clean update compile test assembly
-    $ java -Dfile.encoding=UTF8 -jar target/scala-2.11/helloworld-0.01.jar
+    $ java -Dfile.encoding=UTF8 -jar target/scala-2.11/helloworld-0.02.jar
 
 COPYRIGHT AND LICENCE
 ---------------------

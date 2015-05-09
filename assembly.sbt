@@ -1,4 +1,4 @@
-assemblyJarName in assembly := "helloworld-0.01.jar"
+assemblyJarName in assembly := "helloworld-0.02.jar"
 
 test in assembly := {}
 

@@ -1,9 +1,9 @@
 Scala-HelloWorld
 ================
 
-`Hello World` is the most minimal Scala project you can possibly imagine. It comes up bundled with the minimal set of dependencies required to build, test and run a standalone application JAR. It does not do anything besides printing out a `Hello World!` message to the console, and is meant to primarily serve as an empty template for a quick start to setup your own Scala application. Please adapt package and class names as well as build configuration according to the needs of your program.
+`Hello World` is the most minimal Scala project you can possibly imagine. It comes up bundled with the minimal set of dependencies required to build, test and run a standalone application JAR. It does not do anything besides printing out a `Hello World!` message to the console, and is meant to primarily serve as an empty template for a quick start to setup your own Scala application. Please adapt package and class names as well as build configuration files according to the needs of your program.
 
-This `Hello World` application is setup with [sbt 0.13.8](http://www.scala-sbt.org/) as a build tool, [sbt-assembly 0.13.0](https://github.com/sbt/sbt-assembly) as a packaging plugin, and [ScalaTest 2.2.4](http://www.scalatest.org/) as a unit-testing framework.
+This `Hello World` application is setup with [sbt 0.13.8](http://www.scala-sbt.org/) as a build tool, [sbt-assembly 0.13.0](https://github.com/sbt/sbt-assembly) as a packaging plugin, [ScalaTest 2.2.4](http://www.scalatest.org/) as a unit-testing framework, [Scala Logging 3.1.0](https://github.com/typesafehub/scala-logging) as a logging library wrapping [SLF4J](http://www.slf4j.org/), and [Logback 1.1.3](http://logback.qos.ch/) as a backend logging framework.
 
 VERSION
 -------

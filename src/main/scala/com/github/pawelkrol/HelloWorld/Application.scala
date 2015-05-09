@@ -1,5 +1,10 @@
 package com.github.pawelkrol.HelloWorld
 
-object Application {
-  def main(args: Array[String]) = println(Message.hello)
+import com.typesafe.scalalogging.StrictLogging
+
+object Application extends StrictLogging {
+  def main(args: Array[String]) = {
+    logger.debug("Printing out hello world message")
+    println(Message.hello)
+  }
 }

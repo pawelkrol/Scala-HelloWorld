@@ -10,3 +10,19 @@ libraryDependencies ++= Seq(
   "com.typesafe.scala-logging" %% "scala-logging" % "3.4.0",
   "org.scalatest" %% "scalatest" % "2.2.6" % "test"
 )
+
+artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
+  artifact.name + "-" + module.revision + "." + artifact.extension
+}
+
+proguardSettings
+
+ProguardKeys.filteredInputs in Proguard <++= (packageBin in Compile) map ProguardOptions.noFilter
+
+ProguardKeys.inputs in Proguard <<= (dependencyClasspath in Compile) map { _.files }
+
+ProguardKeys.options in Proguard += ProguardOptions.keepMain("com.github.pawelkrol.HelloWorld.Application")
+
+ProguardKeys.options in Proguard += ProguardConf.helloWorld
+
+ProguardKeys.proguardVersion in Proguard := "5.2.1"

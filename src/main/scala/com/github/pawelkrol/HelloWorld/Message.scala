@@ -1,5 +1,6 @@
 package com.github.pawelkrol.HelloWorld
 
 object Message {
-  def hello = "Hello World!"
+
+  def hello(recipient: String) = "Hello %s!".format(recipient)
 }

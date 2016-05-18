@@ -6,7 +6,7 @@ class MessageSpec extends FunSpec {
 
   describe("message") {
     it("returns hello world string") {
-      assert(Message.hello == "Hello World!")
+      assert(Message.hello("World") == "Hello World!")
     }
   }
 }

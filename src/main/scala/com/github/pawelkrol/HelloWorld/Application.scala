@@ -6,7 +6,7 @@ import scopt.OptionParser
 object Application extends StrictLogging {
 
   private val parser = new OptionParser[Arguments]("helloworld") {
-    head("helloworld", "0.04-SNAPSHOT")
+    head("helloworld", "0.04")
     help("help") text("prints out this usage text")
     opt[String]("name") optional() action { (value: String, option: Arguments) =>
       option.copy(name = value) } text("defines whom do you want to say \"Hello\" (e.g., \"Pawel\", defaults to \"World\")")

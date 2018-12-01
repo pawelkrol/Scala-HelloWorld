@@ -1,8 +1,8 @@
 SCALA LICENSE
 =============
 
-Copyright (c) 2002-2016 EPFL
-Copyright (c) 2011-2016 Typesafe, Inc.
+Copyright (c) 2002-  EPFL
+Copyright (c) 2011-  Lightbend, Inc.
 
 All rights reserved.
 

@@ -3,7 +3,7 @@ lazy val root = (project in file(".")).
     name := "helloworld",
     scalaVersion := "2.13.0",
     scalacOptions ++= Seq("-deprecation", "-feature"),
-    version := "0.06-SNAPSHOT"
+    version := "0.06"
   )
 
 libraryDependencies ++= Seq(

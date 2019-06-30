@@ -6,10 +6,12 @@ import scopt.OptionParser
 object Application extends StrictLogging {
 
   private val parser = new OptionParser[Arguments]("helloworld") {
-    head("helloworld", "0.05")
+    head("helloworld", "0.06-SNAPSHOT")
     help("help") text("prints out this usage text")
-    opt[String]("name") optional() action { (value: String, option: Arguments) =>
-      option.copy(name = value) } text("defines whom do you want to say \"Hello\" (e.g., \"Pawel\", defaults to \"World\")")
+    opt[String]("name")
+      .optional()
+      .action((value: String, option: Arguments) => option.copy(name = value))
+      .text("defines whom do you want to say \"Hello\" (e.g., \"Pawel\", defaults to \"World\")")
   }
 
   def main(args: Array[String]) = {
@@ -30,7 +32,7 @@ object Application extends StrictLogging {
     }
   }
 
-  def runWith(arguments: Arguments) {
+  def runWith(arguments: Arguments): Unit = {
     logger.debug("Printing out hello message")
     println(Message.hello(arguments.name))
   }

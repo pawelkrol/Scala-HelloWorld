@@ -1,16 +1,16 @@
 lazy val root = (project in file(".")).
   settings(
     name := "helloworld",
-    scalaVersion := "2.13.0",
+    scalaVersion := "2.13.3",
     scalacOptions ++= Seq("-deprecation", "-feature"),
-    version := "0.06"
+    version := "0.07-SNAPSHOT"
   )
 
 libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.2.3",
   "com.github.scopt" %% "scopt" % "3.7.1",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
-  "org.scalatest" %% "scalatest" % "3.0.8" % "test"
+  "org.scalatest" %% "scalatest" % "3.2.2" % "test"
 )
 
 artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
@@ -27,4 +27,4 @@ proguardOptions in Proguard += ProguardOptions.keepMain("com.github.pawelkrol.He
 
 proguardOptions in Proguard += ProguardConf.helloWorld
 
-proguardVersion in Proguard := "6.1.1"
+proguardVersion in Proguard := "7.0.0"

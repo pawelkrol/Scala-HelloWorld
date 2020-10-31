@@ -1,8 +1,8 @@
-import org.scalatest.FunSpec
+import org.scalatest.funspec.AnyFunSpec
 
 import com.github.pawelkrol.HelloWorld.Arguments
 
-class ArgumentsSpec extends FunSpec {
+class ArgumentsSpec extends AnyFunSpec {
 
   describe("validate") {
     it("passes default name validation") {

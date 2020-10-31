@@ -8,7 +8,7 @@ This `Hello World` application is setup with [sbt 1.3.13](http://www.scala-sbt.o
 VERSION
 -------
 
-Version 0.07-SNAPSHOT (2020-10-31)
+Version 0.07 (2020-10-31)
 
 INSTALLATION
 ------------
@@ -23,9 +23,9 @@ In order to build and run an application JAR type the following:
     $ cd Scala-HelloWorld
     $ sbt clean update compile test package proguard:proguard
 
-    $ java -Dfile.encoding=UTF8 -jar target/scala-2.13/proguard/helloworld-0.07-SNAPSHOT.jar
-    $ java -Dfile.encoding=UTF8 -jar target/scala-2.13/proguard/helloworld-0.07-SNAPSHOT.jar --help
-    $ java -Dfile.encoding=UTF8 -jar target/scala-2.13/proguard/helloworld-0.07-SNAPSHOT.jar --name Pawel
+    $ java -Dfile.encoding=UTF8 -jar target/scala-2.13/proguard/helloworld-0.07.jar
+    $ java -Dfile.encoding=UTF8 -jar target/scala-2.13/proguard/helloworld-0.07.jar --help
+    $ java -Dfile.encoding=UTF8 -jar target/scala-2.13/proguard/helloworld-0.07.jar --name Pawel
 
 COPYRIGHT AND LICENCE
 ---------------------

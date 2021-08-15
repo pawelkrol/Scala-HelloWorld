@@ -10,9 +10,8 @@ lazy val root = (project in file(".")).
       "-unchecked",
       "-Xfatal-warnings"
     ),
-    version := "0.08-SNAPSHOT"
+    version := "0.08"
   )
-
 
 libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.2.5",

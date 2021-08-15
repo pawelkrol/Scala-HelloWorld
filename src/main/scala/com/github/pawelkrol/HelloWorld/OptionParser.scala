@@ -36,7 +36,7 @@ object OptionParser {
       import builder._
       OParser.sequence(
         programName("helloworld"),
-        head("helloworld", "0.08-SNAPSHOT"),
+        head("helloworld", "0.08"),
         help("help").text("prints out this usage text"),
         opt[String]("name")
           .optional()

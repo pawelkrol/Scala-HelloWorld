@@ -1,16 +1,24 @@
 lazy val root = (project in file(".")).
   settings(
     name := "helloworld",
-    scalaVersion := "2.13.3",
-    scalacOptions ++= Seq("-deprecation", "-feature"),
-    version := "0.07"
+    scalaVersion := "2.13.6",
+    scalacOptions ++= Seq(
+      "-deprecation",
+      "-encoding", "UTF-8",
+      "-feature",
+      "-language:implicitConversions",
+      "-unchecked",
+      "-Xfatal-warnings"
+    ),
+    version := "0.08-SNAPSHOT"
   )
 
+
 libraryDependencies ++= Seq(
-  "ch.qos.logback" % "logback-classic" % "1.2.3",
-  "com.github.scopt" %% "scopt" % "3.7.1",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
-  "org.scalatest" %% "scalatest" % "3.2.2" % "test"
+  "ch.qos.logback" % "logback-classic" % "1.2.5",
+  "com.github.scopt" %% "scopt" % "4.0.1",
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4",
+  "org.scalatest" %% "scalatest" % "3.2.9" % "test"
 )
 
 artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
@@ -19,12 +27,12 @@ artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
 
 enablePlugins(SbtProguard)
 
-proguardFilteredInputs in Proguard ++= ProguardOptions.noFilter((packageBin in Compile).value)
+Proguard / proguardFilteredInputs ++= ProguardOptions.noFilter((Compile / packageBin).value)
 
-proguardInputs in Proguard := (dependencyClasspath in Compile).value.files
+Proguard / proguardInputs := (Compile / dependencyClasspath).value.files
 
-proguardOptions in Proguard += ProguardOptions.keepMain("com.github.pawelkrol.HelloWorld.Application")
+Proguard / proguardOptions += ProguardOptions.keepMain("com.github.pawelkrol.HelloWorld.Application")
 
-proguardOptions in Proguard += ProguardConf.helloWorld
+Proguard / proguardOptions += ProguardConf.helloWorld
 
-proguardVersion in Proguard := "7.0.0"
+Proguard / proguardVersion := "7.1.1"

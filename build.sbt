@@ -10,7 +10,7 @@ lazy val root = (project in file(".")).
       "-unchecked",
       "-Xfatal-warnings"
     ),
-    version := "0.09-SNAPSHOT"
+    version := "0.09"
   )
 
 libraryDependencies ++= Seq(

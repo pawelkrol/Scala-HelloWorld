@@ -10,14 +10,14 @@ lazy val root = (project in file(".")).
       "-unchecked",
       "-Xfatal-warnings"
     ),
-    version := "0.08"
+    version := "0.09-SNAPSHOT"
   )
 
 libraryDependencies ++= Seq(
-  "ch.qos.logback" % "logback-classic" % "1.2.5",
+  "ch.qos.logback" % "logback-classic" % "1.2.6",
   "com.github.scopt" %% "scopt" % "4.0.1",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4",
-  "org.scalatest" %% "scalatest" % "3.2.9" % "test"
+  "org.scalatest" %% "scalatest" % "3.2.10" % "test"
 )
 
 artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>

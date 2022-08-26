@@ -1,1 +1,1 @@
-addSbtPlugin("com.lightbend.sbt" % "sbt-proguard" % "0.5.0-SNAPSHOT")
+addSbtPlugin("com.github.sbt" % "sbt-proguard" % "0.5.0")
